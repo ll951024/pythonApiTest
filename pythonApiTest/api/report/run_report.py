@@ -26,7 +26,7 @@ def send_mail(latest_report):
 
     # 发送邮箱
     sender = 'll17681827772@163.com'
-    # 接受邮箱
+    # 接收邮箱
     receives = ['1144767408@qq.com']
 
     # 发送邮件主题和内容

@@ -10,6 +10,7 @@ print(BASE_DIR)
 sys.path.append(BASE_DIR)
 from api.set.headers import Headers
 from api.set.url import Longbit_Url
+from api.set.jdbc import JDBC
 
 
 
@@ -33,13 +34,18 @@ class UserAsserts(unittest.TestCase):
         self.assertNotEqual(totalAmount,0,msg='测试失败时打印的信息')
         print(f'Success ： 币币账户totalBalance： {totalAmount}')
 
+    #测试数据库连接
+    def test_a(self):
+        atest = JDBC.test(self)
+        print(atest)
 
 
 
 
 
 if __name__ == '__main__':
-    unittest.main()
+
+    unittest.main(verbosity=0)
 
 
 
